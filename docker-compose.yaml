@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  mongo:
+    image: mongo
+    environment:
+      - MONGO_INITDB_DATABASE=strapi
+    ports:
+      - 27017:27017
+
+  content-admin:
+    build: content-admin
+    environment:
+      - DATABASE_HOST=mongo
+    depends_on:
+      - mongo
+    ports:
+      - 1337:1337
+
+  front-end:
+    build: front-end
+    depends_on:
+      - content-admin
+    ports:
+      - 8080:8080

@@ -1,0 +1,6 @@
+.idea
+*/node_modules
+content-admin/build
+content-admin/.cache
+content-admin/public/uploads/*
+!content-admin/public/uploads/.gitkeep
