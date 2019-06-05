@@ -1,0 +1,22 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "banner",
+    "description": "A banner to show on pages"
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "required": true,
+      "type": "string"
+    },
+    "colour": {
+      "default": "#f1f1f1",
+      "required": true,
+      "type": "string"
+    }
+  }
+}
