@@ -1,7 +1,16 @@
 const express = require('express')
+const fetch = require('node-fetch')
 
 const server = express()
 
-server.get('/', (req, res) => res.send('<DOCTYPE !html><h1>Hello World!</h1>'))
+function renderBanner(banner) {
+  return `<div style="background-color: ${banner.colour}"><h1>${banner.title}</h1></div>`
+}
+
+server.get('/', (req, res) => {
+  fetch('http://content-admin:1337/banners')
+    .then(res => res.json())
+    .then(banners => res.send(`<!DOCTYPE html>${banners.map(renderBanner).join('')}`))
+})
 
 module.exports = server

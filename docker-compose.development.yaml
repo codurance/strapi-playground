@@ -29,3 +29,6 @@ services:
       - content-admin
     ports:
       - 8080:8080
+    command: sh -c "yarn install && yarn develop"
+    volumes:
+      - ./front-end/src:/opt/app/src

@@ -1,6 +1,5 @@
 {
   "name": "content-admin",
-  "private": true,
   "version": "0.1.0",
   "description": "A Strapi application.",
   "scripts": {
@@ -29,21 +28,6 @@
     "strapi-plugin-users-permissions": "3.0.0-beta.1",
     "strapi-plugin-email": "3.0.0-beta.1",
     "strapi-plugin-upload": "3.0.0-beta.1"
-  },
-  "author": {
-    "name": "cesco",
-    "email": "francesco.gigli@acuris.com",
-    "url": ""
-  },
-  "maintainers": [
-    {
-      "name": "cesco",
-      "email": "francesco.gigli@acuris.com",
-      "url": ""
-    }
-  ],
-  "strapi": {
-    "uuid": "d8406601-708f-498d-a910-5c4c92d4dd9f"
   },
   "engines": {
     "node": "^10.0.0",
