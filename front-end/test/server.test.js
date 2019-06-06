@@ -8,11 +8,11 @@ describe('app', () => {
       .get('/banners')
       .reply(200, [
         {
-          "colour": "black",
+          "color": "#000",
           "title": "Get ready for black friday!"
         },
         {
-          "colour": "red",
+          "color": "#F00",
           "title": "The color of passion?"
         }
       ])
@@ -22,7 +22,9 @@ describe('app', () => {
     expect(response.status).toBe(200)
     expect(response.type).toBe('text/html')
     expect(response.text).toContain('Get ready for black friday!')
+    expect(response.text).toContain('#000')
     expect(response.text).toContain('The color of passion?')
+    expect(response.text).toContain('#F00')
     expect(nock.isDone()).toBe(true)
   })
 })

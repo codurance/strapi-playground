@@ -4,7 +4,7 @@ const fetch = require('node-fetch')
 const server = express()
 
 function renderBanner(banner) {
-  return `<div style="background-color: ${banner.colour}"><h1>${banner.title}</h1></div>`
+  return `<div style="background-color: ${banner.color}"><h1>${banner.title}</h1></div>`
 }
 
 server.get('/', (req, res) => {
