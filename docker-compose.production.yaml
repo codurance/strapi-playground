@@ -7,9 +7,13 @@ services:
       - MONGO_INITDB_DATABASE=strapi
     ports:
       - 27017:27017
+    volumes:
+      - /data/db
 
   mongo-migration:
     build: mongo-migration
+    environment:
+      - DATABASE_HOST=mongo
     depends_on:
       - mongo
 

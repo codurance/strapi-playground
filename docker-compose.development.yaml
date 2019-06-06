@@ -29,6 +29,7 @@ services:
       - ./content-admin/config:/opt/app/config
       - ./content-admin/extensions:/opt/app/extensions
       - ./content-admin/public:/opt/app/public
+    restart: always
 
   front-end:
     build: front-end
