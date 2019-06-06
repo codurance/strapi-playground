@@ -1,0 +1,15 @@
+{
+  "name": "mongo-migration",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "migrate-mongo": "^6.0.0"
+  },
+  "scripts": {
+    "create": "migrate-mongo create",
+    "up": "migrate-mongo up",
+    "down": "migrate-mongo down",
+    "status": "migrate-mongo status"
+  }
+}

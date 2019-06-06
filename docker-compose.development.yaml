@@ -8,6 +8,13 @@ services:
     ports:
       - 27017:27017
 
+  migration:
+    build: mongo-migration
+    environment:
+      - DATABASE_HOST=mongo
+    depends_on:
+      - mongo
+
   content-admin:
     build: content-admin
     environment:
